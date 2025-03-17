@@ -74,10 +74,10 @@ const Blog = () => {
 				alt="ImgBlog1"
 				className="h-[360px] w-auto object-center object-cover rounded-[16px]"
 			/>
-			<p className=" py-1 px-4 w-fit text-[#12B279] bg-[#D7F2E9]  text-2xl rounded-full  ">
+			<p className=" mt-6 mb-3 py-1 px-4 w-fit text-[#12B279] bg-[#D7F2E9]  text-2xl rounded-full  ">
 				{blogArray.tag}
 			</p>
-			<h1 className="text-3xl font-semibold ">{blogArray.title}</h1>
+			<h1 className="mt-2 text-3xl font-semibold ">{blogArray.title}</h1>
 			<p className="line-clamp-2 text-[22px] ">{blogArray.article}</p>
 			<div className="mt-4 flex items-center text-sm text-gray-500">
 				<img
