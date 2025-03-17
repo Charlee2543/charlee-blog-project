@@ -2,7 +2,7 @@ import Button from "./common/Button";
 
 const NavBar = () => {
 	return (
-		<header className="bg-white shadow-md py-4 px-8 flex justify-between items-center">
+		<header className="bg-white shadow-md py-4 px-8 flex justify-between items-center w-full">
 			<a href="#" className="text-xl font-bold">
 				PM
 			</a>

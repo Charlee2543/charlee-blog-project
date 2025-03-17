@@ -1,7 +1,7 @@
 import Blog from "./Blog";
 const BlogProject = () => {
 	return (
-		<section className="max-w-4xl mx-auto mt-12">
+		<section className="max-w-[1440px] mx-[120px] mt-12 ">
 			<h3 className="text-xl font-bold">Latest articles</h3>
 			<div className="h-[80px] p-6 mt-[32px] mb-[48px]  flex justify-between items-center bg-gray-200">
 				<div className="flex items-center gap-3 ">
