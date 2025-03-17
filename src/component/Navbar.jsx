@@ -20,7 +20,7 @@ const NavBar = () => {
 					className={`${state ? ` max-md:inline` : "max-md:hidden"} relative`}
 				>
 					<div
-						className={`flex gap-4 || max-md:absolute max-md:flex-col right-[-30px] top-0 max-md:w-[150px]  max-md:bg-white rounded-[8px]  border-1 border-[#5c5c5c33] max-md:shadow-[5px_5px_5px_rgba(0,0,0,0.25)] `}
+						className={`flex gap-4 || max-md:absolute max-md:flex-col right-[-30px] top-0 max-md:w-[150px]  max-md:bg-white rounded-[8px]  max-md:border-1 max-md:border-[#5c5c5c33] max-md:shadow-[5px_5px_5px_rgba(0,0,0,0.25)] `}
 					>
 						<Button link="#" nameButton="Home" />
 						<Button link="#" nameButton="About Me" />
