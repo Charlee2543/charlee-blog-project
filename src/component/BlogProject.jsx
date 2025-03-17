@@ -1,3 +1,4 @@
+import Blog from "./Blog";
 const BlogProject = () => {
 	return (
 		<section className="max-w-4xl mx-auto mt-12">
@@ -27,6 +28,9 @@ const BlogProject = () => {
 						<a href="#">🔍</a>
 					</span>
 				</div>
+			</div>
+			<div className=" grid grid-cols-2 gap-2">
+				<Blog />
 			</div>
 		</section>
 	);
