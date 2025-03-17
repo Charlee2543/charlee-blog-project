@@ -1,9 +1,10 @@
+import { Search } from "lucide-react";
 import Blog from "./Blog";
 const BlogProject = () => {
 	return (
 		<section className="max-w-[1440px] mx-[120px] mt-12 ">
 			<h3 className="text-xl font-bold">Latest articles</h3>
-			<div className="h-[80px] p-6 mt-[32px] mb-[48px]  flex justify-between items-center bg-gray-200">
+			<div className="h-[80px] p-6 mt-[32px] mb-[48px] rounded-[16px]  flex justify-between items-center bg-gray-200">
 				<div className="flex items-center gap-3 ">
 					<button className="px-4 py-2 bg-gray-300 rounded-[5px]">
 						Highlight
@@ -25,7 +26,9 @@ const BlogProject = () => {
 						placeholder="Search"
 					/>
 					<span className="absolute right-3 top-2 text-gray-400">
-						<a href="#">🔍</a>
+						<a href="#">
+							<Search />
+						</a>
 					</span>
 				</div>
 			</div>
