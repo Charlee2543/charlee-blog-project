@@ -1,4 +1,4 @@
-import imgMe from '../../assets/picture/xgfy0xnvyemkklcqodkg.jpg';
+import imgMe from '../assets/picture/user1.jpg';
 const AboutMe = () => {
    return (
       <div className="mt-8 flex flex-col md:flex-row items-center gap-8">

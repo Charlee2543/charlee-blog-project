@@ -1,9 +1,9 @@
-import Button from '../common/Button';
+import Button from '../components/common/Button';
 import { useState } from 'react';
 import { AlignJustify } from 'lucide-react';
 const NavBar = () => {
    const [state, setState] = useState(false);
-   console.log(state);
+   // console.log(state);
    const setMenu = () => setState(!state);
    return (
       <header className="bg-white shadow-md py-4 px-8 flex justify-between items-center w-full">

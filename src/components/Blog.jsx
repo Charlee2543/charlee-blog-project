@@ -1,8 +1,8 @@
-import ImgBlog1 from '../../assets/picture/mita1.jpg';
-import dataBlog from '@/data';
+import ImgBlog1 from '../assets/picture/mita2.jpg';
+import dataBlog from '@/dataBlog';
 const Blog = () => {
    return dataBlog.map((blogArray) => (
-      <div className="w-[100%] flex flex-col mb-[48px]">
+      <div className="w-[100%] flex flex-col mb-[48px]" key={blogArray.id}>
          <img
             src={blogArray.image}
             alt="ImgBlog1"

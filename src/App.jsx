@@ -1,13 +1,12 @@
-import NavBar from './component/pages/Navbar';
-import HeroSection from './component/pages/HeroSection';
-import BlogProject from './component/pages/BlogProject';
-import Footer from './component/pages/Footer';
+import './App.css';
+import NavBar from './pages/Navbar';
+import HeroSection from './pages/HeroSection';
+import Footer from './pages/Footer';
 function App() {
    return (
       <div className=" flex flex-col items-center">
          <NavBar />
          <HeroSection />
-         <BlogProject />
          <Footer />
       </div>
    );
