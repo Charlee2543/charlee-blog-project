@@ -31,21 +31,28 @@ const BlogProject = () => {
          <section className="h-[80px] p-6 mt-[32px] mb-[48px] rounded-[16px]  flex justify-between items-center bg-gray-200 gap-4 max-md:flex-col-reverse max-md:h-auto">
             {categoryBlog.map((categoryBotton) => {
                return (
-                  <div className="flex items-center gap-3 max-md:hidden">
+                  <div
+                     className="flex items-center gap-3 max-md:hidden"
+                     key={categoryBotton}
+                  >
                      <button className="selectCategory">
                         {categoryBotton}
                      </button>
                   </div>
                );
             })}
-            <Select className="w-full h-[48px]  border-1  border-amber-500">
+            <Select
+               className="w-full h-[48px]  border-1  border-amber-500"
+               defaultValue="Highlight"
+               // value="Cat"
+            >
                <SelectTrigger className=" w-full  h-full rounded-[16px] px-4 py-2 bg-white  hidden max-md:flex ">
                   <SelectValue placeholder="Highlight" />
                </SelectTrigger>
                <SelectContent>
                   {categoryBlog.map((categoryBotton) => {
                      return (
-                        <SelectItem value={categoryBotton}>
+                        <SelectItem value={categoryBotton} key={categoryBotton}>
                            {categoryBotton}
                         </SelectItem>
                      );
