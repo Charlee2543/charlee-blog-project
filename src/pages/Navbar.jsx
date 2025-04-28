@@ -6,7 +6,7 @@ const NavBar = () => {
    // console.log(state);
    const setMenu = () => setState(!state);
    return (
-      <header className="bg-white shadow-md py-4 px-8 flex justify-between items-center w-full">
+      <header className="bg-white shadow-md py-6 px-[120px] flex justify-between items-center w-full max-md:px-6">
          <a href="#" className="text-xl font-bold">
             PM
          </a>
@@ -15,20 +15,20 @@ const NavBar = () => {
                onClick={setMenu}
                className="hidden max-md:flex cursor-pointer"
             />
-
             <div
                className={`${
                   state ? ` max-md:inline` : 'max-md:hidden'
-               } relative`}
+               } relative `}
             >
                <div
-                  className={`flex gap-4 || max-md:absolute max-md:flex-col right-[-30px] top-0 max-md:w-[150px]  max-md:bg-white rounded-[8px]  max-md:border-1 max-md:border-[#5c5c5c33] max-md:shadow-[5px_5px_5px_rgba(0,0,0,0.25)] `}
+                  className={`flex gap-2 max-md:gap-6 max-md:px-6 max-md:py-10  max-md:flex-col  max-md:w-[100vw]   max-md:absolute right-[-56px] top-[10px]  max-md:bg-white rounded-[8px]  max-md:border-1 max-md:border-[#5c5c5c33] max-md:shadow-[5px_5px_5px_rgba(0,0,0,0.25)] `}
                >
-                  <Button link="#" nameButton="Home" />
-                  <Button link="#" nameButton="About Me" />
-                  <Button link="#" nameButton="Blog" />
-                  <Button link="#" nameButton="Contact" />
                   <Button link="#" nameButton="Login" />
+                  <Button
+                     link="#"
+                     nameButton="Sign up"
+                     className="text-white bg-black "
+                  />
                </div>
             </div>
          </nav>

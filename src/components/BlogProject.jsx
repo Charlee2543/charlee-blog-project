@@ -9,48 +9,57 @@ import {
    SelectTrigger,
    SelectValue,
 } from '@/components/ui/select';
+import { useState } from 'react';
 // import { Divide } from 'lucide-react';
 import dataBlog from '../dataBlog';
+
 const BlogProject = () => {
-   const categoryBlog = ['Highlight'];
+   const [categoryBlog, setCategoryBlog] = useState('Highlight');
+   // เปลี่ยนtage
+   const changeCategory = (inputCatagory) => {
+      setCategoryBlog(inputCatagory);
+   };
+   const allCatagory = ['Highlight'];
+   // เช็คมีtag อะไรบ้าง
    dataBlog.forEach((data) => {
       //forEach จะทำงานในfunchtion โดยไม่มีค่าที่ return ออกมา
-      if (!categoryBlog.includes(data.category)) {
-         // console.log(
-         //    data.category,
-         //    ' : ',
-         //    categoryBlog.includes(data.category)
-         // );
-         categoryBlog.push(data.category);
+      if (!allCatagory.includes(data.category)) {
+         allCatagory.push(data.category);
       }
    });
-   // console.log('categoryBlog: ', categoryBlog);
+
    return (
       <div className="max-w-[1440px] mx-[120px] mt-12 ">
          <h3 className="text-xl font-bold">Latest articles</h3>
          <section className="h-[80px] p-6 mt-[32px] mb-[48px] rounded-[16px]  flex justify-between items-center bg-gray-200 gap-4 max-md:flex-col-reverse max-md:h-auto">
-            {categoryBlog.map((categoryBotton) => {
-               return (
-                  <div
-                     className="flex items-center gap-3 max-md:hidden"
-                     key={categoryBotton}
-                  >
-                     <button className="selectCategory">
+            <div className="flex items-center gap-3 max-md:hidden">
+               {allCatagory.map((categoryBotton) => {
+                  return (
+                     <button
+                        className={`selectCategory ${
+                           categoryBlog === categoryBotton ? 'selectTag' : ''
+                        }`}
+                        key={categoryBotton}
+                        onClick={() => changeCategory(categoryBotton)}
+                     >
                         {categoryBotton}
                      </button>
-                  </div>
-               );
-            })}
+                  );
+               })}
+            </div>
             <Select
                className="w-full h-[48px]  border-1  border-amber-500"
-               defaultValue="Highlight"
-               // value="Cat"
+               value={categoryBlog}
+               onValueChange={(event) => {
+                  console.log('event: ', event);
+                  return changeCategory(event);
+               }}
             >
                <SelectTrigger className=" w-full  h-full rounded-[16px] px-4 py-2 bg-white  hidden max-md:flex ">
-                  <SelectValue placeholder="Highlight" />
+                  <SelectValue>{categoryBlog}</SelectValue>
                </SelectTrigger>
                <SelectContent>
-                  {categoryBlog.map((categoryBotton) => {
+                  {allCatagory.map((categoryBotton) => {
                      return (
                         <SelectItem value={categoryBotton} key={categoryBotton}>
                            {categoryBotton}
@@ -60,7 +69,7 @@ const BlogProject = () => {
                </SelectContent>
             </Select>
 
-            <div className="flex items-center w-[30%] h-[48px] relative max-md:w-full ">
+            <div className="flex items-center w-[30%] min-w-[100px] h-[48px] relative max-md:w-full ">
                <Input
                   type="text"
                   placeholder="search"
